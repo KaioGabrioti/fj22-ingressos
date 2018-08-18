@@ -53,15 +53,4 @@ public class SessaoController {
 		return	new	ModelAndView("redirect:/admin/sala/" + form.getSalaId() + "/sessoes");
 		
 	}
-	
-	@GetMapping("admin/sala/{id}/sessoes")
-	public ModelAndView listaSessoes(@PathVariable("id")Integer id){
-		
-		ModelAndView view = new ModelAndView("sessao/lista");
-		
-		Sala sala = salaDao.findOne(id);
-		view.addObject("sessoes", sessaoDao.buscaSessoesDaSala(sala));
-		
-		return view;
-	}
 }

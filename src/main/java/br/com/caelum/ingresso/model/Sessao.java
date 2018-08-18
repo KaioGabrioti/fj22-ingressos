@@ -2,11 +2,11 @@ package br.com.caelum.ingresso.model;
 
 import java.time.LocalTime;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import org.hibernate.annotations.Entity;
 
 @Entity
 public class Sessao {
@@ -21,6 +21,9 @@ public class Sessao {
 	
 	private LocalTime horario;
 
+	public Sessao(){
+		
+	}
 	public Sessao(LocalTime horario, Filme filme, Sala sala){
 		this.horario = horario;
 		this.filme = filme;
