@@ -18,9 +18,9 @@ public class Filme {
     @GeneratedValue
     private Integer id;
     private String nome;
-    private Duration duracao;
+    private long duracao;
     private String genero;
-    private BigDecimal preco;
+    private BigDecimal preco = BigDecimal.ZERO;
         
     /**
      * @deprecated hibernate only
@@ -29,7 +29,7 @@ public class Filme {
 
     }
     
-    public Filme(String nome, Duration duracao, String genero, BigDecimal preco) {
+    public Filme(String nome, Long duracao, String genero, BigDecimal preco) {
 		this.nome = nome;
 		this.duracao = duracao;
 		this.genero = genero;
@@ -52,12 +52,12 @@ public class Filme {
         this.nome = nome;
     }
 
-    public Duration getDuracao() {
+    public Long getDuracao() {
         return duracao;
     }
 
     public void setDuracao(long duracao) {
-        this.duracao = Duration.ofMinutes(duracao);
+        this.duracao = duracao;
     }
 
     public String getGenero() {
