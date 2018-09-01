@@ -14,7 +14,7 @@ import br.com.caelum.ingresso.model.Sessao;
 
 public class SessaoForm {
 	
-	private Long id;
+	private Integer id;
 	
 	@NotNull
 	private Integer salaId;
@@ -28,13 +28,13 @@ public class SessaoForm {
 	
 	
 	
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
 
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

@@ -18,7 +18,7 @@ public class Filme {
     @GeneratedValue
     private Integer id;
     private String nome;
-    private long duracao;
+    private Duration duracao;
     private String genero;
     private BigDecimal preco = BigDecimal.ZERO;
         
@@ -29,9 +29,9 @@ public class Filme {
 
     }
     
-    public Filme(String nome, Long duracao, String genero, BigDecimal preco) {
+    public Filme(String nome, Duration duration, String genero, BigDecimal preco) {
 		this.nome = nome;
-		this.duracao = duracao;
+		this.duracao = duration;
 		this.genero = genero;
 		this.preco = preco;
 	}
@@ -52,11 +52,11 @@ public class Filme {
         this.nome = nome;
     }
 
-    public Long getDuracao() {
+    public Duration getDuracao() {
         return duracao;
     }
 
-    public void setDuracao(long duracao) {
+    public void setDuracao(Duration duracao) {
         this.duracao = duracao;
     }
 

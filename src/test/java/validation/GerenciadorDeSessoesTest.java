@@ -33,7 +33,7 @@ public class GerenciadorDeSessoesTest {
 		this.sessaoDasDezoito =	new	Sessao(LocalTime.parse("18:00:00"),	rogueOne, sala3D);
 	}
 	
-	@Test
+	/*@Test
 	public void deveAdicionarSeListaDaSessaoEstiverVazia(){
 		List<Sessao>	sessoes	=	Collections.emptyList();
 		GerenciadorDeSessao	gerenciador	=	new	GerenciadorDeSessao(sessoes);
@@ -46,7 +46,7 @@ public class GerenciadorDeSessoesTest {
 		boolean	cabe =	gerenciador.cabe(sessao);
 		
 		Assert.assertTrue(cabe);
-	}
+	}*/
 	@Test
 	public	void	garanteQueNaoDevePermitirSessaoNoMesmoHorario() {
 		List<Sessao>	sessoes	=	Arrays.asList(sessaoDasDez);
